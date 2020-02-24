@@ -69,6 +69,3 @@ print(x, type(x))
 
 x = bool(x)
 print(x, type(x))
-
-# 4. Строки
-
