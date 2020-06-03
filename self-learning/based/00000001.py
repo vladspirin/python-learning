@@ -175,20 +175,31 @@
 #     count += 1
 
 # print(min(total))
-    
-# answers = [i for i in input()]
-# answers_c = answers.count("C")
-# answers_i = answers.count("I")
-# for j in answers:
-#     if answers_i == 3:
+
+# x, y = input().split()
+# print(f"{x} of {y}")
+
+# scores = input().split()
+# # put your python code here
+# for i in scores:
+#     if scores.count("I") == 3:
 #         print("Game over")
-#         break
-#         print(answers_c)
-        
-#     else:        
+#         print(scores.count("C"))
+#         break    
+#     else:
 #         print("You won")
-#         print(answers_c)
+#         print(scores.count("C"))
+#         break
+# print(scores)
 
-
-x, y = input().split()
-print(f"{x} of {y}")
+scores = input().split()
+counter = 0
+i = 0
+while True:
+    if scores[i] == str():
+        counter += 1
+    if scores.count("I") == 3:
+        print("Game over")
+        break
+    
+    print(counter) 
