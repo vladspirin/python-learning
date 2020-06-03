@@ -30,3 +30,10 @@ while cal <= 2020:
     cal += 1
 else:
     print('Done')
+
+i = 0
+a = 'a'
+while i < 8:
+    a *= 2
+    i += 1
+print(a)
