@@ -17,22 +17,25 @@ type "m" - for count of months,
 type "p" - for monthly payment:     
 """)
 
+# months_count = 0
+# monthly_payment = 0
+
 if calculation == "m":
-    month = int(input("Enter count of months:\n"))
+    months_count = int(input("Enter monthly payment:\n"))
 elif calculation == "p":
-    monthly_payment = int(input("Enter monthly payment:\n"))
+    monthly_payment = int(input("Enter count of months:\n"))
 
-payment = round(principal / month)
-# lastpayment = principal - (periods - 1) * payment
-
-if payment > 1:
-    m = "months"
+if months_count % 10 == 1 or months_count != 11:
+    m = 'month'
 else:
-    m = "month"
-# print(payment)
+    m = 'months'
 
-print(f"It takes {payment, m} to repay the credit" )
-# print(f"Your monthly payment = {lastpayment}")
+
+payment = round(principal / months_count)
+# last_payment = principal - (months_count - 1) * payment
+
+print(f"It takes {payment} {m} to repay the credit")
+print(f"Your monthly payment = {payment}")
 
 
 
