@@ -1,11 +1,11 @@
-Write a program that takes an integer number x and prints e (a mathematical constant) raised to power x, minus one. Use the function expm1 defined in the math module.
+# Write a program that takes an integer number x and prints e (a mathematical constant) raised to power x, minus one. Use the function expm1 defined in the math module.
+# The variable x is already defined.
+# Sample Input 1:
+# -57
+# Sample Output 1:
+# -1.0
+from math import expm1
 
-The variable x is already defined.
 
-Sample Input 1:
-
--57
-Sample Output 1:
-
--1.0
-
+number = int(input())
+print(expm1(number))
