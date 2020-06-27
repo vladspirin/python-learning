@@ -1,16 +1,22 @@
-# def final_deposit_amount(*interest, amount=1000):
-#     for i in interest:
-#         amount = amount * (1 + i/100)
-#     return round(amount, 2)
-# print(final_deposit_amount(5, 7, 4))
+# def tallest_people(**user_data):
+#     for key, value in sorted(user_data.items()):
+#         if max(user_data.values()) == value:
+#             print(key, value, sep=' : ')
 
-def tallest_people(**user_data):
-    max_key = max(user_data, key=user_data.get)
-    max_value = max(user_data.values())
-    # srt_list = sorted(user_data)
-    # print(srt_list)
-    for key, value in user_data.items():
-        if max_value == value:
-            return print(max_key, max_value, sep=' : ')
     
-tallest_people(Jackie=176, Wilson=185, Saersha=165, Roman=185, Abram=169)
+# tallest_people(Jackie=176, Wilson=185, Saersha=165, Roman=185, Abram=169)
+
+def calculate_linear(k, b, x):
+    return k * x + b
+
+
+def calculate_quadratic(a, b, c, x):
+    return (a * x * x) + (b * x) + c
+
+
+def common_part(action):
+    return print("Value of the function equals", action)
+
+
+common_part(calculate_quadratic(4, 5, 6, 7))
+common_part(calculate_linear(4, 5, 6))
