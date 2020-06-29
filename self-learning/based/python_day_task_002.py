@@ -1,4 +1,4 @@
-# There's a list with info about people who search for a date. For each person, a few parameters are specified: their gender, age, hobbies, and city.
+# 1. There's a list with info about people who search for a date. For each person, a few parameters are specified: their gender, age, hobbies, and city.
 
 potential_dates = [{"name": "Julia", "gender": "female", "age": 29,
                     "hobbies": ["jogging", "music"], "city": "Hamburg"},
@@ -14,6 +14,7 @@ potential_dates = [{"name": "Julia", "gender": "female", "age": 29,
 # Help a new user write a function that selects from the given list people older than 30, interested in art, and living in Berlin.
 # The function should return their names as a string, separated by a comma and a space, e.g. "Maria, Daniel" for the example list above.
 
-# def selects_people(some_list):
-#     for i in some_list:
+def select_dates(potential_dates):
+    return ", ".join(person["name"] for person in potential_dates
+                     if person["age"] > 30 and person["city"] == "Berlin" and "art" in person["hobbies"])
     
