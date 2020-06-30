@@ -1,37 +1,35 @@
-# # 2.
-# print("".join([chr(ord(i) + 1) for i in input()]))
+# 2.
+print("".join([chr(ord(i) + 1) for i in input()]))
 
-# # 3.
-# u_code = int(input())
-# print(chr(u_code)) if u_code in range(32, 127) else print(False)
+# 3.
+u_code = int(input())
+print(chr(u_code)) if u_code in range(32, 127) else print(False)
 
-# # 4.
-# numbers = [1, 2, 3]
-# my_generator = (n ** 2 for n in numbers)
-# for n in my_generator:
-#     print(n)
+# 4.
+numbers = [1, 2, 3]
+my_generator = (n ** 2 for n in numbers)
+for n in my_generator:
+    print(n)
 
-# # 5.
-# sum_gen = sum((int(i) for i in input()))
+# 5.
+sum_gen = sum((int(i) for i in input()))
 
-# # 6.
+# 6.
+n = int(input())
 
-# n = int(input())
 
-
-# def squares(num):
-#     i = 1
-#     while i <= num:
-#         yield i ** 2
-#         i += 1
+def squares(num):
+    i = 1
+    while i <= num:
+        yield i ** 2
+        i += 1
     
 
-# my_generator = squares(n)
-# for j in my_generator:
-#     print(j)
+my_generator = squares(n)
+for j in my_generator:
+    print(j)
 
 # 7.
-
 n = int(input())
 
 
