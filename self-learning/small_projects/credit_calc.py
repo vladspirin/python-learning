@@ -13,7 +13,7 @@ if args.type not in ['annuity', 'diff']:
     print('Incorrect Parameters')
     exit(0)
 
-if args.type == 'diff' and args.payment != None:
+if args.type == 'diff' and args.payment is not None:
     print('Incorrect Parameters')
     exit(0)
 
@@ -21,24 +21,24 @@ args_list = [args.type, args.payment, args.principal, args.periods, args.interes
 
 count = 0
 for item in args_list:
-    if item == None:
+    if item is None:
         count += 1
 
 if count > 1:
     print('Incorrect Parameters')
     exit(0)
 
-if args_list[1] != None and args_list[1] < 0 or args_list[2] != None and args_list[2] < 0 or args_list[3] != None and \
-        args_list[3] < 0 or args_list[4] != None and args_list[4] < 0.0:
+if args_list[1] is not None and args_list[1] < 0 or args_list[2] is not None and args_list[2] < 0 or \
+        args_list[3] is not None and args_list[3] < 0 or args_list[4] is not None and args_list[4] < 0.0:
     print('Incorrect Ha ha')
     exit(0)
 
-if args.type == 'annuity' and args.payment != None and args.principal != None and args.interest != None:
+if args.type == 'annuity' and args.payment is not None and args.principal is not None and args.interest is not None:
 
     nominal_interest = args.interest / (12 * 100)
 
-    months = math.ceil(math.log(args.payment
-                                / (args.payment - nominal_interest * args.principal), (1 + nominal_interest)))
+    months = ceil(log(args.payment
+                      / (args.payment - nominal_interest * args.principal), (1 + nominal_interest)))
 
     overpayment = months * args.payment - args.principal
 
@@ -54,7 +54,7 @@ if args.type == 'annuity' and args.payment != None and args.principal != None an
     print('Overpayment = ', overpayment)
 
 
-elif args.type == 'annuity' and args.periods != None and args.payment != None and args.interest != None:
+elif args.type == 'annuity' and args.periods is not None and args.payment is not None and args.interest is not None:
 
     nominal_interest = args.interest / (12 * 100)
 
@@ -64,10 +64,10 @@ elif args.type == 'annuity' and args.periods != None and args.payment != None an
 
     overpayment = args.periods * args.payment - credit_principal
 
-    print('Your credit principal =', str(credit_principal) + '!')
-    print('Overpayment = ', overpayment)
+    print(f'Your credit principal = {credit_principal}!')
+    print(f'Overpayment = {overpayment}')
 
-elif args.type == 'annuity' and args.periods != None and args.principal != None and args.interest != None:
+elif args.type == 'annuity' and args.periods is not None and args.principal is not None and args.interest is not None:
 
     nominal_interest = args.interest / (12 * 100)
 
@@ -79,7 +79,7 @@ elif args.type == 'annuity' and args.periods != None and args.principal != None 
     monthly_payment = ceil(monthly_payment)
     print(f'Your annuity payment = {monthly_payment}!')
 
-elif args.type == 'diff' and args.periods != None and args.principal != None and args.interest != None:
+elif args.type == 'diff' and args.periods is not None and args.principal is not None and args.interest is not None:
     nominal_interest = args.interest / (12 * 100)
     diff_total_amount = 0
     for i in range(1, args.periods + 1):
@@ -88,4 +88,4 @@ elif args.type == 'diff' and args.periods != None and args.principal != None and
         diff_total_amount += diff_amount
         print(f'Month {i}: paid out {diff_amount}')
     overpayment = diff_total_amount - args.principal
-    print('Overpayment = ', overpayment)
+    print(f'Overpayment = {overpayment}')
