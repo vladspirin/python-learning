@@ -1,9 +1,9 @@
-import copy
+from copy import deepcopy
 
 
-# def solve(obj):
-#     deep_copy = copy.deepcopy(obj)
-#     
-#     
+def solve(obj):
+    deep_copy = deepcopy(obj)
+    return True if id(deep_copy) in obj else False
 
-# solve([1, [3]])
+
+print(solve(1))
