@@ -55,7 +55,7 @@ def check_items():
         if one_cup.get('water') < water:
             if one_cup.get('milk') < milk:
                 if one_cup.get('coffee_beans') < coffee_beans:
-                    return print(f'Yes, I can make that amount of coffee {amt_average - cups_count()} more than that')
+                    return print(f'Yes, I can make that amount of coffee {amt_average} more than that')
                 return print(f'No, I can make only {cups_count()} cups of coffee')
 
 

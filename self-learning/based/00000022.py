@@ -22,3 +22,12 @@ for dish, price in menu_iterator:
 # choice = 
 
 # in process
+
+# Next
+
+# duration = int(input())
+# total_food_per_day = int(input())
+# one_way_flight = int(input())
+# hotel = int(input())
+
+# print(((total_food_per_day * duration) + hotel * (duration - 1)) + one_way_flight * 2)
